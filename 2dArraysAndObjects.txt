@@ -1,4 +1,42 @@
-1. Display "John" by extracting information from the person object and print it in the console.
+1. Given the code below, 
+
+var uhdata = [
+  {
+    "FISCAL_YEAR":2010,
+    "CAMPUS":"UH Manoa",
+    "CIP":220101,
+    "CIP_DESC":"Law",
+    "GROUP1":"School of Law",
+    "GROUP2":"School of Law",
+    "GROUP3":"Law",
+    "GROUP4":"",
+    "GROUP5":"",
+    "OUTCOME":"Other",
+    "HAWAIIAN_LEGACY":"",
+    "AWARDS":69
+  },
+  {
+    "FISCAL_YEAR":2010,
+    "CAMPUS":"Kapi`olani CC",
+    "CIP":240101,
+    "CIP_DESC":"Liberal Arts",
+    "GROUP1":"General & Pre-Prof Ed",
+    "GROUP2":"Liberal Arts",
+    "GROUP3":"Liberal Arts",
+    "GROUP4":"",
+    "GROUP5":"",
+    "OUTCOME":"Associate Degrees",
+    "HAWAIIAN_LEGACY":"",
+    "AWARDS":322
+  }
+];
+
+How would you access value "Liberal Arts" in CIP_DESC and display it in the console?
+
+*Answer*
+console.log(uhdata[1].CIP_DESC);
+
+2. Display "John" by extracting information from the person object and print it in the console.
 
 var person = { 
 	firstName: "John", 
@@ -8,7 +46,7 @@ var person = {
 *Answer*
 console.log(person.firstName);
 
-2. Use a for...in loop to display the values of this object.
+3. Use a for...in loop to display the values of this object.
 
 var bear = {
 	firstName: "Grizzly", 
@@ -24,7 +62,7 @@ for (var key in bear){
 	console.log(bear[key]);
 }
 
-3. Access the object in the previous question to display "Grizzly Bear loves marshmallows" as a string concatenation and print it in the console.
+4. Access the object in the previous question to display "Grizzly Bear loves marshmallows" as a string concatenation and print it in the console.
 
 *Answer*
 console.log(bear.firstName + " " + bear.lastName + " loves " + bear.favoriteFood);
