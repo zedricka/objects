@@ -1,0 +1,30 @@
+1. Display "John" by extracting information from the person object and print it in the console.
+
+var person = { 
+	firstName: "John", 
+	lastName: "Doe"
+};
+
+*Answer*
+console.log(person.firstName);
+
+2. Use a for...in loop to display the values of this object.
+
+var bear = {
+	firstName: "Grizzly", 
+	lastName: "Bear", 
+	age: 9,
+	height: "5 cm",
+	favoriteFood: "marshmallows"
+};
+
+*Answer*
+
+for (var key in bear){
+	console.log(bear[key]);
+}
+
+3. Access the object in the previous question to display "Grizzly Bear loves marshmallows" as a string concatenation and print it in the console.
+
+*Answer*
+console.log(bear.firstName + " " + bear.lastName + " loves " + bear.favoriteFood);
