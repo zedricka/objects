@@ -14,11 +14,13 @@ function toType(obj) {
 */
 function pastLessons(car1, car2){
 	//Print the parameters being passed through
-
+console.log(car1);
+console.log(car2);
 	//Create an array named "cars" and set it's values to the passed parameters
-
+var cars = [car1, car2];
+console.log(cars);
 	//Return the array values as a concatenated string
-	return 
+	return "my first car was " + cars[0] + " and my second car was " + cars[1];
 }
 console.log("\n***Past Lessons***\n");
 console.log(pastLessons("Toyota", "Jeep Wrangler"));
@@ -34,12 +36,17 @@ console.log("\n***End of Past Lessons***\n");
 
 function twoDArrays(nestedArray){
 	//Print the parameter
+	console.log(nestedArray);
 
 	//Print the first nested array
+	// [0, 1, 3, [3, 4, 5]]
+	console.log(nestedArray[3]);
 
 	//Print the second item in the nested array
+	console.log(nestedArray[3][1]);
 
 	//Can you print the third item in the *bonus* array?
+	console.log(nestedArray[3][3][2]);
 
 	//Create a variable called "nestedArrayString" that stores the values in the nested array as a concatenated string and use this variable as the return value of this function
 
@@ -49,11 +56,11 @@ function twoDArrays(nestedArray){
 }
 
 console.log("2-D Arrays\n");
-console.log(twoDArrays([0, 1, 2, [3, 4, 5]]));
+// console.log(twoDArrays([0, 1, 2, [3, 4, 5]]));
 
-/*Bonus Array
+// Bonus Array
 console.log(twoDArrays([0, 1, 2, [3, 4, 5, [6, 7, 8]]]));
-*/
+
 
 console.log("\n***End***\n");
 
@@ -78,13 +85,33 @@ function objectsAndProperties(car){
 	var properties = "";
 
 	//Print the parameter being passed through
+console.log(car);
 
 	//Print the parameters length
+console.log(car.length); //Doesn't work!!!
 
+console.log(car.type);
+
+console.log(car.color);
 	//Iterate through the keys in the array and change their value
+	for (var key in car){
+		console.log(key);
+		keys += " " + key; // += adds on to it
+		console.log(keys);
+
+		console.log(car[key]); //use [] to access the object
+		properties += " " + car[key];
+		console.log(properties);
+	}
 
 	//Return the paramter and it's key:value pairs as a string concatenation
-	return;
+
+console.log("Parameter keys" + keys);
+console.log("Parameter properties" + properties);
+
+console.log(car.type + car.model + car.color);
+
+	return "My car type is " + car.type + " it's model is " + car.model + " and it's color is " + car.color;
 }
 
 console.log("Objects and their Properties\n");
